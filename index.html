@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Production NVIDIA x ElevenLabs Agent</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; text-align: center; padding: 50px; background: #0b0f19; color: white; }
+        .card { background: #111827; padding: 30px; border-radius: 16px; max-width: 450px; margin: 0 auto; border: 1px solid #1f2937; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        .pulse-indicator { width: 80px; height: 80px; border-radius: 50%; background: #76b900; margin: 20px auto; display: flex; align-items: center; justify-content: center; font-weight: bold; color: black; box-shadow: 0 0 0 0 rgba(118, 185, 0, 0.7); }
+        .listening { animation: pulse 1.5s infinite; background: #76b900; color: black; }
+        .thinking { background: #3b82f6; color: white; animation: none; }
+        .speaking { background: #a855f7; color: white; animation: none; }
+        #status { margin: 20px 0; color: #9ca3af; font-size: 14px; }
+        #box { border: 1px solid #374151; padding: 15px; border-radius: 8px; min-height: 120px; text-align: left; background: #030712; font-size: 14px; line-height: 1.5; }
+        @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(118, 185, 0, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(118, 185, 0, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(118, 185, 0, 0); } }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>NVIDIA Voice Assistant</h2>
+        <div id="indicator" class="pulse-indicator listening">LIVE</div>
+        <p id="status">Status: Starting Continuous Mic...</p>
+        <br>
+        <div id="box"><strong>Conversation Log:</strong><p id="log"></p></div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
