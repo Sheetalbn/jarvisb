@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import fetch from 'node-fetch';
+
 
 const app = express();
 app.use(cors()); // This lets your frontend access the backend securely from any URL
